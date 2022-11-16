@@ -1,0 +1,26 @@
+<div class="container">
+  <app-nav-bar></app-nav-bar>
+  <main>
+    <div class="text-center border-bottom">
+      <p class="display-3 fw-bold">Catalogo de plantas</p>
+      <p class="display-6">Aqui encontraras plantas de la mejor calidad!</p>
+    </div>
+    <div class="row card-group">
+      <div *ngFor="let product of productsList" class="col-4 mt-5">
+        <div class="card w-100 h-100">
+          <div class="card-body">
+            <h1 class="card-title text-center">
+              <a routerLink="" class="text-decoration-none text-dark">
+                {{ product.name }}
+              </a>
+            </h1>
+            <p class="card-text">
+              {{ product.description }}
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <app-footer class="fixed-bottom"></app-footer>
+</div>

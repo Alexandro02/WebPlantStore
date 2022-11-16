@@ -1,0 +1,45 @@
+import { Component, OnInit } from '@angular/core';
+
+interface productsI {
+  name?: string;
+  description?: string;
+}
+
+@Component({
+  selector: 'app-plants-page',
+  templateUrl: './plants-page.component.html',
+  styleUrls: ['./plants-page.component.scss'],
+})
+export class PlantsPageComponent implements OnInit {
+  productsList: Array<productsI> = [
+    {
+      name: 'Flores',
+      description: 'Todo tipo de flores',
+    },
+    {
+      name: 'Arboles',
+      description: 'Todo tipo de arboles',
+    },
+    {
+      name: 'Cactus',
+      description: 'Los mejores cactus del desierto para tu hogar',
+    },
+    {
+      name: 'Helechos',
+      description: 'Los mejores helechos para tu hogar',
+    },
+    {
+      name: 'Palmeras',
+      description:
+        'Descubre los diferentes tipos de palmeras que tenemos para ti!',
+    },
+    {
+      name: 'Pasto',
+      description: 'Todo tipo de pasto para tu jardin',
+    },
+  ];
+
+  constructor() {}
+
+  ngOnInit(): void {}
+}
