@@ -48,18 +48,21 @@
           Comprar
         </button>
       </div>
-      <ng-container *ngIf="true">
+      <ng-container *ngIf="!(plantName === '' || plantPath === '')">
         <div class="col-sm-6">
           <div class="w-100 h-100 mt-5 text-center">
-            <img class="w-100 h-50" [src]="plantPath" alt="Plant" />
+            <img class="w-50 h-50" [src]="plantPath" alt="Plant" />
             <h5>{{ plantName }}</h5>
-            <button (click)="deletePlant()" class="btn btn-danger float-start">
+            <button
+              (click)="deletePlant()"
+              class="btn btn-danger float-start mt-5"
+            >
               Eliminar
             </button>
           </div>
         </div>
       </ng-container>
-      <ng-container *ngIf="false">
+      <ng-container *ngIf="plantName === '' || plantPath === ''">
         <div class="col-sm-6 text-center mt-5">
           <p class="display-4">No hay nada en el carrito por ahora!</p>
           <button routerLink="/plants" class="btn btn-primary">

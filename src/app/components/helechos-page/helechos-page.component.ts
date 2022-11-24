@@ -37,6 +37,7 @@ export class HelechosPageComponent implements OnInit {
   storeOnLocal(plant: any, image: any) {
     localStorage.setItem('plant', JSON.stringify(plant));
     localStorage.setItem('plantImg', JSON.stringify(image));
+    window.alert('Planta agregada al carrito!');
   }
 
   constructor() {}

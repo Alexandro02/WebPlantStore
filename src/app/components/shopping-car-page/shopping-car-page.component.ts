@@ -11,14 +11,17 @@ export class ShoppingCarPageComponent implements OnInit {
   // quit all double quotes from path
   plantPath = this.plantImg.replace(/['"]+/g, '');
   // Get plant name from local storage
-  plantName: any = localStorage.getItem('plant');
+  plant: any = localStorage.getItem('plant');
+  // Get name without double quotes
+  plantName = this.plant.replace(/['"]+/g, '');
 
   constructor() {}
 
   ngOnInit(): void {}
 
   deletePlant() {
-    localStorage.removeItem(this.plantName);
-    localStorage.removeItem(this.plantImg);
+    localStorage.clear();
+    this.plantName = '';
+    this.plantPath = '';
   }
 }
