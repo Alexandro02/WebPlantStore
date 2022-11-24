@@ -13,16 +13,18 @@
               [alt]="helecho.plantName"
               class="card-img-top w-100 h-100 rounded-top"
             />
+
             <div class="card-body">
               <h2 class="card-title text-center fs-3">
                 {{ helecho.plantName }}
               </h2>
               <p class="card-text">Precio: {{ helecho.price }}$.</p>
-              <button class="btn btn-info float-start">
-                <a
-                  [routerLink]="helecho.link"
-                  class="text-decoration-none text-dark"
-                >
+              <button
+                [routerLink]="helecho.link"
+                class="btn btn-info float-start"
+                (click)="storeOnLocal(helecho.plantName, helecho.pathLink)"
+              >
+                <a class="text-decoration-none text-dark">
                   Agregar al carrito
                 </a>
               </button>

@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-interface HelechosI {
+interface HelechoI {
   plantName?: string;
   price?: number;
   pathLink?: string;
@@ -13,9 +13,9 @@ interface HelechosI {
   styleUrls: ['./helechos-page.component.scss'],
 })
 export class HelechosPageComponent implements OnInit {
-  helechosArray: Array<HelechosI> = [
+  helechosArray: Array<HelechoI> = [
     {
-      plantName: 'Helecho Plumozo',
+      plantName: 'Helecho Plumoso',
       price: 100,
       pathLink: '../../../assets/flowers-imgs/helecho1.png',
       link: 'cart',
@@ -33,6 +33,11 @@ export class HelechosPageComponent implements OnInit {
       link: 'cart',
     },
   ];
+
+  storeOnLocal(plant: any, image: any) {
+    localStorage.setItem('plant', JSON.stringify(plant));
+    localStorage.setItem('plantImg', JSON.stringify(image));
+  }
 
   constructor() {}
 

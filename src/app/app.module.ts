@@ -11,9 +11,7 @@ import { ContactPageComponent } from './components/contact-page/contact-page.com
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
 import { PlantsPageComponent } from './components/plants-page/plants-page.component';
-import { FlowersPageComponent } from './components/flowers-page/flowers-page.component';
 import { HelechosPageComponent } from './components/helechos-page/helechos-page.component';
-import { TreesPageComponent } from './components/trees-page/trees-page.component';
 import { ShoppingCarPageComponent } from './components/shopping-car-page/shopping-car-page.component';
 
 const oktaConfig = {
@@ -32,9 +30,7 @@ const oktaConfig = {
     ErrorPageComponent,
     LoginPageComponent,
     PlantsPageComponent,
-    FlowersPageComponent,
     HelechosPageComponent,
-    TreesPageComponent,
     ShoppingCarPageComponent,
   ],
   imports: [BrowserModule, AppRoutingModule, OktaAuthModule],
