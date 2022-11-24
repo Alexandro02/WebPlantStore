@@ -9,7 +9,11 @@ import { FooterComponent } from './components/footer/footer.component';
 import { ContactPageComponent } from './components/contact-page/contact-page.component';
 import { ErrorPageComponent } from './components/error-page/error-page.component';
 import { LoginPageComponent } from './components/login-page/login-page.component';
-import { PlantsPageComponent } from './components/plants-page/plants-page.component'
+import { PlantsPageComponent } from './components/plants-page/plants-page.component';
+import { FlowersPageComponent } from './components/flowers-page/flowers-page.component';
+import { HelechosPageComponent } from './components/helechos-page/helechos-page.component';
+import { TreesPageComponent } from './components/trees-page/trees-page.component';
+import { ShoppingCarPageComponent } from './components/shopping-car-page/shopping-car-page.component';
 
 @NgModule({
   declarations: [
@@ -20,13 +24,14 @@ import { PlantsPageComponent } from './components/plants-page/plants-page.compon
     ContactPageComponent,
     ErrorPageComponent,
     LoginPageComponent,
-    PlantsPageComponent
+    PlantsPageComponent,
+    FlowersPageComponent,
+    HelechosPageComponent,
+    TreesPageComponent,
+    ShoppingCarPageComponent,
   ],
-  imports: [
-    BrowserModule,
-    AppRoutingModule,
-  ],
+  imports: [BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}

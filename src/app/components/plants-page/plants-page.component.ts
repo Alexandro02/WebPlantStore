@@ -3,6 +3,7 @@ import { Component, OnInit } from '@angular/core';
 interface productsI {
   name?: string;
   description?: string;
+  link?: string;
 }
 
 @Component({
@@ -15,27 +16,33 @@ export class PlantsPageComponent implements OnInit {
     {
       name: 'Flores',
       description: 'Todo tipo de flores',
+      link: 'flowers',
     },
     {
       name: 'Arboles',
       description: 'Todo tipo de arboles',
+      link: 'trees',
     },
     {
       name: 'Cactus',
       description: 'Los mejores cactus del desierto para tu hogar',
+      link: 'cactus',
     },
     {
       name: 'Helechos',
       description: 'Los mejores helechos para tu hogar',
+      link: 'helechos',
     },
     {
       name: 'Palmeras',
       description:
         'Descubre los diferentes tipos de palmeras que tenemos para ti!',
+      link: 'palms',
     },
     {
       name: 'Pasto',
       description: 'Todo tipo de pasto para tu jardin',
+      link: 'grass',
     },
   ];
 

@@ -1,0 +1,36 @@
+<div class="container">
+  <app-nav-bar></app-nav-bar>
+  <main>
+    <div class="border-bottom">
+      <h1 class="display-2 text-center fw-bold">Helechos</h1>
+    </div>
+    <div class="card-group d-flex justify-content-center">
+      <div class="row card-group">
+        <div *ngFor="let helecho of helechosArray" class="col-4 mt-5">
+          <div class="card w-100 h-100">
+            <img
+              [src]="helecho.pathLink"
+              [alt]="helecho.plantName"
+              class="card-img-top w-100 h-100 rounded-top"
+            />
+            <div class="card-body">
+              <h2 class="card-title text-center fs-3">
+                {{ helecho.plantName }}
+              </h2>
+              <p class="card-text">Precio: {{ helecho.price }}$.</p>
+              <button class="btn btn-info float-start">
+                <a
+                  [routerLink]="helecho.link"
+                  class="text-decoration-none text-dark"
+                >
+                  Agregar al carrito
+                </a>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+  <app-footer class="fixed-bottom"></app-footer>
+</div>

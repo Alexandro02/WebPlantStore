@@ -10,7 +10,10 @@
         <div class="card w-100 h-100">
           <div class="card-body">
             <h1 class="card-title text-center">
-              <a routerLink="" class="text-decoration-none text-dark">
+              <a
+                [routerLink]="product.link"
+                class="text-decoration-none text-dark"
+              >
                 {{ product.name }}
               </a>
             </h1>

@@ -1,34 +1,70 @@
-<nav class="navbar navbar-expand-lg bg-transparent">
+<nav class="navbar navbar-expand-lg bg-transparent row">
   <div class="container-fluid border-bottom">
-    <a class="navbar-brand" href="#">
-      <img src="../../../assets/company-logo.png" alt="Logo" width="50" height="45"
-        class="d-inline-block align-text-top" />
-    </a>
-    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <img
+      src="../../../assets/company-logo.png"
+      alt="Logo"
+      width="50"
+      height="45"
+      class="d-inline-block align-text-top m-2"
+    />
+    <button
+      class="navbar-toggler"
+      type="button"
+      data-bs-toggle="collapse"
+      data-bs-target="#navbarNav"
+      aria-controls="navbarNav"
+      aria-expanded="false"
+      aria-label="Toggle navigation"
+    >
       <span class="navbar-toggler-icon"></span>
     </button>
     <div class="collapse navbar-collapse" id="navbarNav">
       <ul class="navbar-nav">
         <li class="nav-item">
-          <b><a class="nav-link active" routerLink="">Inicio</a></b>
-        </li>
-        <li class="nav-item">
-          <b><a class="nav-link" routerLink="/plants">Plantas</a></b>
-        </li>
-        <li class="nav-item">
           <b>
-            <a class="nav-link" routerLink="/contact">Contacto</a>
+            <a
+              class="nav-link"
+              routerLink=""
+              [routerLinkActiveOptions]="{ exact: true }"
+              routerLinkActive="active"
+            >
+              Inicio
+            </a>
           </b>
         </li>
         <li class="nav-item">
           <b>
-            <a class="nav-link" routerLink="/help">Ayuda</a>
+            <a class="nav-link" routerLink="/plants" routerLinkActive="active"
+              >Plantas
+            </a>
           </b>
         </li>
         <li class="nav-item">
           <b>
-            <a class="nav-link" routerLink="/logIn">Log in</a>
+            <a class="nav-link" routerLink="/contact" routerLinkActive="active"
+              >Contacto
+            </a>
+          </b>
+        </li>
+        <li class="nav-item">
+          <b>
+            <a class="nav-link" routerLink="/help" routerLinkActive="active">
+              Ayuda
+            </a>
+          </b>
+        </li>
+        <li class="nav-item">
+          <b>
+            <a class="nav-link" routerLink="/logIn" routerLinkActive="active"
+              >Log in
+            </a>
+          </b>
+        </li>
+        <li class="nav-item">
+          <b>
+            <a class="nav-link" routerLink="/cart" routerLinkActive="active">
+              <i class="fa-solid fa-cart-shopping"></i>
+            </a>
           </b>
         </li>
       </ul>
