@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { OKTA_CONFIG, OktaAuthModule } from '@okta/okta-angular';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +15,12 @@ import { FlowersPageComponent } from './components/flowers-page/flowers-page.com
 import { HelechosPageComponent } from './components/helechos-page/helechos-page.component';
 import { TreesPageComponent } from './components/trees-page/trees-page.component';
 import { ShoppingCarPageComponent } from './components/shopping-car-page/shopping-car-page.component';
+
+const oktaConfig = {
+  issuer: 'https://dev-53222201.okta.com/oauth2/default',
+  clientId: '0oa7dsfwndvC0aTs75d7',
+  redirectUri: window.location.origin + '/callback',
+};
 
 @NgModule({
   declarations: [
@@ -30,8 +37,13 @@ import { ShoppingCarPageComponent } from './components/shopping-car-page/shoppin
     TreesPageComponent,
     ShoppingCarPageComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
-  providers: [],
+  imports: [BrowserModule, AppRoutingModule, OktaAuthModule],
+  providers: [
+    {
+      provide: OKTA_CONFIG,
+      useValue: oktaConfig,
+    },
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

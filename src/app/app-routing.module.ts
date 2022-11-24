@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { OktaCallbackComponent, OktaAuthGuard } from '@okta/okta-angular';
 
 import { HomePageComponent } from './components/home-page/home-page.component';
 import { ContactPageComponent } from './components/contact-page/contact-page.component';
@@ -26,6 +27,7 @@ const routes: Routes = [
   {
     path: 'plants',
     component: PlantsPageComponent,
+    // canActivate: [OktaAuthGuard],
   },
   {
     path: 'plants/flowers',
@@ -42,6 +44,10 @@ const routes: Routes = [
   {
     path: 'cart',
     component: ShoppingCarPageComponent,
+  },
+  {
+    path: 'callback',
+    component: OktaCallbackComponent,
   },
   {
     path: '**',

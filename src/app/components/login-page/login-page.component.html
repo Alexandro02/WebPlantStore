@@ -10,7 +10,7 @@
         <p>Inicio de sesion</p>
       </div>
       <form>
-        <div class="mb-3">
+        <div *ngIf="!isAuthenticated" class="mb-3">
           <label for="exampleInputEmail1" class="form-label"
             >Correo electronico</label
           >
@@ -23,8 +23,37 @@
           <div id="emailHelp" class="form-text w-25">
             Su correo nunca sera compartido con nadie.
           </div>
+          <label for="exampleInputPassword1" class="form-label"
+            >Contraseña</label
+          >
+          <input
+            type="password"
+            class="form-control w-50 mb-2"
+            id="exampleInputPassword1"
+          />
+          <button
+            type="submit"
+            (click)="logIn()"
+            class="btn btn-info px-4 py-2"
+          >
+            Ingresar
+          </button>
         </div>
-        <div class="mb-3">
+      </form>
+      <form>
+        <div *ngIf="isAuthenticated" class="mb-3">
+          <label for="exampleInputEmail1" class="form-label"
+            >Correo electronico</label
+          >
+          <input
+            type="email"
+            class="form-control w-50"
+            id="exampleInputEmail1"
+            aria-describedby="emailHelp"
+          />
+          <div id="emailHelp" class="form-text w-25">
+            Su correo nunca sera compartido con nadie.
+          </div>
           <label for="exampleInputPassword1" class="form-label"
             >Contraseña</label
           >
@@ -33,8 +62,10 @@
             class="form-control w-50"
             id="exampleInputPassword1"
           />
+          <button type="submit" (click)="logIn()" class="btn btn-info">
+            Ingresar
+          </button>
         </div>
-        <button type="submit" class="btn1">Ingresar</button>
       </form>
     </section>
   </main>
